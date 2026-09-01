@@ -126,7 +126,7 @@
   /* ===== Hero / Landing ===== */
   .hero{
     display:flex; align-items:center; gap:64px;
-    padding:96px 0 84px;
+    padding:56px 0 84px;
   }
   .hero-copy{ flex:1; max-width:520px; }
   .eyebrow-pill{
@@ -184,7 +184,7 @@
   .flavor-pill-card span{ font-size:12px; color:var(--brown-faint); }
 
   /* ===== Product selection ===== */
-  .product-screen-inner{ padding:64px 0 100px; }
+  .product-screen-inner{ padding:40px 0 100px; }
   .breadcrumb{ font-size:13px; color:var(--brown-faint); font-weight:600; margin-bottom:22px; display:flex; align-items:center; gap:6px; }
   .breadcrumb b{ color:var(--brown); }
 
@@ -293,7 +293,7 @@
   .cart-actions{ display:flex; flex-direction:column; gap:10px; margin-top:20px; }
 
   /* ===== Checkout ===== */
-  .checkout-screen-inner{ padding:56px 0 110px; }
+  .checkout-screen-inner{ padding:40px 0 110px; }
   .page-title{ font-family:var(--font-display); font-size:32px; font-weight:700; margin-bottom:38px; }
 
   .checkout-grid{ display:grid; grid-template-columns:1fr 400px; gap:32px; align-items:flex-start; }
@@ -325,7 +325,7 @@
   .checkout-sticky{ position:sticky; top:32px; }
 
   /* ===== Confirmation ===== */
-  .confirm-screen-inner{ padding:100px 0 100px; display:flex; justify-content:center; }
+  .confirm-screen-inner{ padding:64px 0 100px; display:flex; justify-content:center; }
   .confirm-card{ max-width:480px; width:100%; text-align:center; }
   .confirm-illo{ width:150px; height:150px; margin:0 auto 32px; }
   .confirm-card h1{ font-family:var(--font-display); font-size:32px; font-weight:800; margin-bottom:12px; }
@@ -341,7 +341,7 @@
   .confirm-actions .btn{ flex:1; }
 
   /* ===== Tracking ===== */
-  .tracking-screen-inner{ padding:56px 0 110px; }
+  .tracking-screen-inner{ padding:40px 0 110px; }
   .track-grid{ display:grid; grid-template-columns:1fr 380px; gap:32px; align-items:flex-start; }
 
   .status-highlight{
@@ -432,7 +432,7 @@
   .toast svg{ width:16px; height:16px; color:var(--orange); }
 
   /* ===== About ===== */
-  .about-screen-inner{ padding:88px 0 100px; }
+  .about-screen-inner{ padding:56px 0 100px; }
   .about-hero{ max-width:600px; margin-bottom:56px; }
   .about-hero h1{ font-family:var(--font-display); font-size:44px; font-weight:800; line-height:1.1; letter-spacing:-0.5px; margin:20px 0 20px; }
   .about-hero p{ font-size:16px; line-height:1.65; color:var(--brown-soft); }
@@ -461,7 +461,7 @@
   .about-cta .btn-primary{ background:#fff; color:var(--orange-deep); box-shadow:none; }
 
   /* ===== Contact ===== */
-  .contact-screen-inner{ padding:56px 0 110px; }
+  .contact-screen-inner{ padding:40px 0 110px; }
   .contact-sub{ font-size:15px; color:var(--brown-soft); max-width:520px; margin:-18px 0 38px; line-height:1.6; }
   .contact-grid{ display:grid; grid-template-columns:1fr 380px; gap:32px; align-items:flex-start; }
 
