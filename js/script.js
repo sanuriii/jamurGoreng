@@ -10,6 +10,14 @@ const DELIVERY_FEE = 8000;
 
   const fmt = (n) => 'Rp' + n.toLocaleString('id-ID');
 
+  const flavorImages = {
+    Original: 'image/jamur_ori.jpg',
+    Balado: 'image/jamur_balado.png',
+    BBQ: 'image/jamur_bbq.png',
+    Keju: 'image/jamur_keju.png',
+    Pedas: 'image/jamur_pedas.png'
+  };
+
   /* ---------- navigation ---------- */
   function goTo(screen){
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('visible'));
@@ -37,6 +45,9 @@ const DELIVERY_FEE = 8000;
     btn.classList.add('selected');
     state.flavor = btn.dataset.flavor;
     document.getElementById('flavorLabel').textContent = state.flavor;
+    const img = document.getElementById('productImage');
+    img.src = btn.dataset.img || flavorImages[state.flavor];
+    img.alt = state.flavor;
   });
 
   document.getElementById('sizeRow').addEventListener('click', (e) => {
@@ -114,7 +125,7 @@ const DELIVERY_FEE = 8000;
     } else {
       wrap.innerHTML = state.cart.map(item => `
         <div class="cart-item" data-id="${item.id}">
-          <div class="cart-thumb">${mushroomIconSmall()}</div>
+          <div class="cart-thumb"><img src="${flavorImages[item.flavor]}" alt="${item.flavor}"></div>
           <div class="cart-item-body">
             <div class="cart-item-top">
               <b>Jamur Goreng Crispy</b>
@@ -164,7 +175,7 @@ const DELIVERY_FEE = 8000;
     const lines = document.getElementById('checkoutLines');
     lines.innerHTML = state.cart.map(item => `
       <div class="order-line">
-        <div class="order-line-thumb">${mushroomIconSmall()}</div>
+        <div class="order-line-thumb"><img src="${flavorImages[item.flavor]}" alt="${item.flavor}"></div>
         <div>
           <b>Jamur Goreng Crispy</b>
           <div class="order-line-meta">${item.flavor} · ${item.size} · × ${item.qty}</div>
