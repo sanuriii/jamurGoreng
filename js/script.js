@@ -3,7 +3,7 @@ const DELIVERY_FEE = 8000;
   const state = {
     flavor: 'Original',
     size: 'Medium',
-    unitPrice: 15000,
+    unitPrice: 18000,
     qty: 1,
     cart: [] // {id, flavor, size, qty, unitPrice}
   };
@@ -202,6 +202,14 @@ const DELIVERY_FEE = 8000;
   document.getElementById('helpBtn').addEventListener('click', () => {
     showToast('Menghubungkan ke tim support...');
   });
+
+  /* ---------- contact ---------- */
+  const sendBtn = document.getElementById('sendMessageBtn');
+  if(sendBtn){
+    sendBtn.addEventListener('click', () => {
+      showToast('Pesan terkirim, tim kami akan segera membalas');
+    });
+  }
 
   /* ---------- notifications ---------- */
   const notifPop = document.getElementById('notifPopover');

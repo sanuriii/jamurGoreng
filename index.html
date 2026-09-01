@@ -13,7 +13,7 @@
 
 <div class="app">
 
-  <!w-- ===================== SIDEBAR ===================== -->
+  <!-- ===================== SIDEBAR ===================== -->
   <aside class="sidebar">
     <a href="#" class="brand" data-nav="landing">
       <svg class="brand-mark" viewBox="0 0 40 40" fill="none">
@@ -37,11 +37,11 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.6 6.6L22 9l-5.4 4.6L18 21l-6-3.8L6 21l1.4-7.4L2 9l7.4-.4L12 2z"/></svg>
         Best Seller
       </a>
-      <a href="#" class="nav-item">
+      <a href="#" class="nav-item" data-nav="about">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5"/><path d="M12 8h.01"/></svg>
         About
       </a>
-      <a href="#" class="nav-item">
+      <a href="#" class="nav-item" data-nav="contact">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Contact
       </a>
@@ -172,6 +172,14 @@
       <div class="container product-screen-inner">
         <div class="breadcrumb"><a data-nav="landing">Home</a> / <b>Menu</b></div>
 
+        <div class="section-head" style="margin-bottom:30px;">
+          <div>
+            <div class="eyebrow-pill" style="margin-bottom:14px;"><span class="dot"></span>Menu Kami</div>
+            <h2 style="margin-bottom:0;">Pilih Rasa Favoritmu</h2>
+            <p>Satu produk, banyak pilihan. Sesuaikan dengan seleramu.</p>
+          </div>
+        </div>
+
         <div class="product-card">
           <div class="product-media">
             <span class="product-badge">Best Seller</span>
@@ -202,9 +210,9 @@
             <div class="option-block">
               <div class="field-label">Pilih Ukuran <span class="sel-val" id="sizeLabel">Medium</span></div>
               <div class="chip-row" id="sizeRow">
-                <button class="chip" data-size="Small" data-price="15000">Small</button>
-                <button class="chip selected" data-size="Medium" data-price="15000">Medium</button>
-                <button class="chip" data-size="Large" data-price="15000">Large</button>
+                <button class="chip" data-size="Small" data-price="12000">Small · 100g</button>
+                <button class="chip selected" data-size="Medium" data-price="18000">Medium · 200g</button>
+                <button class="chip" data-size="Large" data-price="25000">Large · 350g</button>
               </div>
             </div>
 
@@ -222,7 +230,7 @@
             <div class="product-footer">
               <div class="price-block">
                 <span>Total Harga</span>
-                <b id="productPrice">Rp15.000</b>
+                <b id="productPrice">Rp18.000</b>
               </div>
               <button class="btn btn-primary" id="addToCartBtn">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
@@ -359,6 +367,110 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
               <div><b>Butuh Bantuan?</b><span>Chat tim kami</span></div>
               <button class="btn btn-primary btn-sm" id="helpBtn">Hubungi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="screen" id="screen-about">
+      <div class="container about-screen-inner">
+        <div class="about-hero">
+          <div class="eyebrow-pill"><span class="dot"></span>Cerita Kami</div>
+          <h1>Dari dapur rumahan<br>jadi camilan favorit.</h1>
+          <p>Jamur Kriuk dimulai tahun 2021 dari dapur kecil di Yogyakarta. Kami percaya jamur tiram lokal bisa jadi camilan gurih yang jujur — tanpa pengawet, digoreng fresh setiap hari.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="about-stat"><b>2021</b><span>Berdiri sejak</span></div>
+          <div class="about-stat"><b>40rb+</b><span>Porsi terjual</span></div>
+          <div class="about-stat"><b>12</b><span>Kota terjangkau</span></div>
+          <div class="about-stat"><b>4.9/5</b><span>Rating pelanggan</span></div>
+        </div>
+
+        <div class="about-values">
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h4>Digoreng Fresh</h4>
+            <p>Setiap pesanan digoreng setelah masuk, bukan stok dari pagi. Jadi renyahnya selalu terjaga.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h4>Bahan Terpilih</h4>
+            <p>Jamur tiram dari petani lokal langganan kami, dipetik maksimal sehari sebelum digoreng.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </div>
+            <h4>Dibuat dengan Niat</h4>
+            <p>Resep bumbu diracik sendiri, bukan bubuk instan — biar rasanya kerasa beda dari yang lain.</p>
+          </div>
+        </div>
+
+        <div class="about-cta">
+          <div>
+            <h3>Penasaran rasanya?</h3>
+            <p>Coba salah satu dari lima varian rasa kami hari ini.</p>
+          </div>
+          <button class="btn btn-primary" data-nav="product">Lihat Menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="screen" id="screen-contact">
+      <div class="container contact-screen-inner">
+        <div class="page-title">Hubungi Kami</div>
+        <p class="contact-sub">Ada pertanyaan soal pesanan, kerja sama reseller, atau sekadar mau kasih masukan? Kami senang dengar dari kamu.</p>
+
+        <div class="contact-grid">
+          <div class="panel">
+            <h3>Kirim Pesan</h3>
+            <div class="form-field">
+              <label>Nama</label>
+              <input type="text" placeholder="Nama kamu">
+            </div>
+            <div class="form-field">
+              <label>Email atau Nomor HP</label>
+              <input type="text" placeholder="email@contoh.com">
+            </div>
+            <div class="form-field">
+              <label>Pesan</label>
+              <textarea placeholder="Tulis pertanyaan atau masukanmu di sini"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" id="sendMessageBtn">Kirim Pesan</button>
+          </div>
+
+          <div class="contact-info-col">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h3.3a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.5 1.1L7.6 9.9a12 12 0 0 0 6.5 6.5l1.05-2.2a1 1 0 0 1 1.1-.5l4 1a1 1 0 0 1 .75 1V19a2 2 0 0 1-2 2h-1C9.6 21 3 14.4 3 6z"/></svg>
+              </div>
+              <div><b>WhatsApp / Telepon</b><span>0812-3456-7890</span></div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              </div>
+              <div><b>Email</b><span>halo@jamurkriuk.id</span></div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div><b>Dapur & Pickup</b><span>Jl. Kaliurang KM 5, Sleman, Yogyakarta</span></div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div><b>Jam Operasional</b><span>Setiap hari, 10.00 – 21.00 WIB</span></div>
             </div>
           </div>
         </div>
