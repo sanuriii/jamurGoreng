@@ -27,6 +27,7 @@ const DELIVERY_FEE = 8000;
     window.scrollTo({top:0, behavior:'smooth'});
     closeCart();
     closeNotif();
+    closeMobileSidebar();
     if(screen === 'checkout') renderCheckout();
     if(screen === 'tracking') renderTracking();
   }
@@ -36,6 +37,19 @@ const DELIVERY_FEE = 8000;
       goTo(el.getAttribute('data-nav'));
     });
   });
+
+  /* ---------- mobile sidebar (off-canvas) ---------- */
+  const sidebar = document.querySelector('.sidebar');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+  function openMobileSidebar(){ sidebar.classList.add('mobile-open'); sidebarOverlay.classList.add('open'); }
+  function closeMobileSidebar(){ sidebar.classList.remove('mobile-open'); sidebarOverlay.classList.remove('open'); }
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  if(hamburgerBtn){
+    hamburgerBtn.addEventListener('click', () => {
+      sidebar.classList.contains('mobile-open') ? closeMobileSidebar() : openMobileSidebar();
+    });
+  }
+  sidebarOverlay.addEventListener('click', closeMobileSidebar);
 
   /* ---------- product selection ---------- */
   document.getElementById('flavorRow').addEventListener('click', (e) => {
@@ -101,6 +115,8 @@ const DELIVERY_FEE = 8000;
   function openCart(){ drawer.classList.add('open'); overlay.classList.add('open'); }
   function closeCart(){ drawer.classList.remove('open'); overlay.classList.remove('open'); }
   document.getElementById('cartIconBtn').addEventListener('click', openCart);
+  const cartIconBtnMobile = document.getElementById('cartIconBtnMobile');
+  if(cartIconBtnMobile) cartIconBtnMobile.addEventListener('click', openCart);
   document.getElementById('cartCloseBtn').addEventListener('click', closeCart);
   document.getElementById('continueShoppingBtn').addEventListener('click', closeCart);
   overlay.addEventListener('click', () => { closeCart(); closeNotif(); });
@@ -111,10 +127,14 @@ const DELIVERY_FEE = 8000;
   function renderCart(){
     const wrap = document.getElementById('cartItemsWrap');
     const badge = document.getElementById('cartBadge');
+    const badgeMobile = document.getElementById('cartBadgeMobile');
     const count = cartCount();
 
-    if(count > 0){ badge.style.display = 'flex'; badge.textContent = count; }
-    else { badge.style.display = 'none'; }
+    [badge, badgeMobile].forEach(b => {
+      if(!b) return;
+      if(count > 0){ b.style.display = 'flex'; b.textContent = count; }
+      else { b.style.display = 'none'; }
+    });
 
     if(state.cart.length === 0){
       wrap.innerHTML = `<div class="cart-empty">
